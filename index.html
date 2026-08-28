@@ -5,22 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raexxne | Developer Portfolio</title>
   
-  <!-- Poppins Font from Google Fonts -->
+  <!-- Poppins Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
   
-  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation -->
   <nav id="navbar">
-    <a href="#" class="logo">Raexxne<span>.</span></a>
+    <a href="#home" class="logo">RAEXXNE<span>!</span></a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -28,47 +26,72 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span class="highlight">Raexxne</span></h1>
-      <h2>I am a <span id="typewriter" class="typewriter"></span></h2>
-      <p>Building clean, functional, and visually appealing digital experiences with a love for dark themes and neon aesthetics.</p>
+    <div class="hero-content comic-panel">
+      <div class="speech-bubble">HELLO WORLD!</div>
+      <h1>I'M <span class="highlight-red">RAEXXNE</span></h1>
+      <h2>I am a <span id="typewriter" class="typewriter highlight-blue"></span></h2>
+      <p>Building explosive, functional, and visually striking digital experiences. Welcome to my creative universe!</p>
+      
       <div class="hero-buttons">
-        <a href="#projects" class="btn primary-btn">View My Work</a>
-        <a href="https://github.com/raexxne" target="_blank" class="btn secondary-btn">GitHub Profile</a>
+        <a href="#projects" class="btn btn-yellow">View My Work</a>
+        <a href="https://github.com/raexxne" target="_blank" rel="noopener noreferrer" class="btn btn-blue">GitHub Profile</a>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
-    <h2 class="section-title">Featured Projects</h2>
+    <h2 class="section-title">FEATURED <span class="highlight-yellow">PROJECTS</span></h2>
+    
     <div class="grid">
       <!-- Project 1 -->
-      <div class="card">
-        <h3>🐍 Neon Snake Game</h3>
-        <p>A classic Snake game built with HTML5 Canvas and JS. Features custom UI popovers and a glowing Tokyo Night aesthetic.</p>
-        <a href="#" class="card-link">View Code &rarr;</a>
+      <div class="comic-card">
+        <div class="card-image bg-pink">
+          <span class="boom-text">BAM!</span>
+        </div>
+        <div class="card-content">
+          <h3>Neon Snake Game</h3>
+          <p>A classic Snake game built with HTML5 Canvas and JS. Defeat the high score with custom UI popovers!</p>
+          <a href="https://github.com/raexxne" target="_blank" class="btn btn-small btn-red">View Code</a>
+        </div>
       </div>
+
       <!-- Project 2 -->
-      <div class="card">
-        <h3>🚀 Personal Portfolio</h3>
-        <p>A responsive, multi-file developer portfolio (HTML, CSS, JS) hosted directly on GitHub Pages.</p>
-        <a href="#" class="card-link">View Code &rarr;</a>
+      <div class="comic-card">
+        <div class="card-image bg-cyan">
+           <span class="boom-text">POW!</span>
+        </div>
+        <div class="card-content">
+          <h3>Comic Portfolio</h3>
+          <p>A fully responsive, multi-file developer portfolio hosted on GitHub Pages with a striking comic book theme.</p>
+          <a href="#home" class="btn btn-small btn-blue">You're Here!</a>
+        </div>
       </div>
-      <!-- Add more project cards here -->
+      
+      <!-- Project 3 -->
+      <div class="comic-card">
+        <div class="card-image bg-yellow">
+           <span class="boom-text">ZAP!</span>
+        </div>
+        <div class="card-content">
+          <h3>GitHub Stats</h3>
+          <p>Customized Tokyo Night GitHub README statistics, fully integrated with real-time API data tracking.</p>
+          <a href="https://github.com/raexxne" target="_blank" class="btn btn-small btn-dark">View Profile</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="contact">
+  <footer id="contact" class="comic-panel-footer">
     <div class="footer-content">
-      <h2>Let's Connect</h2>
-      <p>Find me on <a href="https://github.com/raexxne" class="highlight">GitHub</a> to see what I'm currently building.</p>
-      <p class="copyright">&copy; 2026 Raexxne. Built with HTML, CSS, & JS.</p>
+      <h2>LET'S TEAM UP!</h2>
+      <p>Ready to build something awesome? Find me on <a href="https://github.com/raexxne" target="_blank" class="highlight-blue footer-link">GitHub</a>.</p>
+      <a href="mailto:your-email@example.com" class="btn btn-yellow">Email Me</a>
+      <p class="copyright">&copy; 2026 Raexxne. Coded with HTML, CSS & JS.</p>
     </div>
   </footer>
 
-  <!-- Link to external JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
