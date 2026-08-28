@@ -1,0 +1,244 @@
+/* --- Variables (Tokyo Night Palette) --- */
+:root {
+  --bg-main: #1a1b26;
+  --bg-card: #24283b;
+  --text-main: #c0caf5;
+  --text-muted: #9aa5ce;
+  --accent-blue: #7aa2f7;
+  --accent-green: #9ece6a;
+  --accent-magenta: #bb9af7;
+}
+
+/* --- Base Setup --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Typography & Utilities --- */
+.highlight {
+  color: var(--accent-blue);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--accent-magenta);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- Navbar --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: rgba(26, 27, 38, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(122, 162, 247, 0.1);
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+nav .logo span {
+  color: var(--accent-green);
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav .nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  color: var(--accent-blue);
+}
+
+/* --- Hero Section --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  padding-top: 80px; /* Offset for navbar */
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: var(--accent-green);
+  margin-bottom: 20px;
+  min-height: 48px; /* Prevents layout shift during typing */
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: transparent;
+  color: var(--accent-green);
+  border: 2px solid var(--accent-green);
+  margin-right: 15px;
+}
+
+.primary-btn:hover {
+  background-color: var(--accent-green);
+  color: var(--bg-main);
+  box-shadow: 0 0 20px rgba(158, 206, 106, 0.4);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: var(--accent-blue);
+  border: 2px solid var(--accent-blue);
+}
+
+.secondary-btn:hover {
+  background-color: var(--accent-blue);
+  color: var(--bg-main);
+  box-shadow: 0 0 20px rgba(122, 162, 247, 0.4);
+}
+
+/* --- Projects Section --- */
+.projects {
+  padding: 100px 8%;
+  background-color: var(--bg-card);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background-color: var(--bg-main);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 162, 247, 0.1);
+  transition: transform 0.4s ease, border-color 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-blue);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: var(--accent-green);
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+.card-link {
+  color: var(--accent-magenta);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--accent-blue);
+}
+
+/* --- Footer --- */
+footer {
+  padding: 60px 8%;
+  text-align: center;
+  background-color: var(--bg-main);
+  border-top: 1px solid rgba(122, 162, 247, 0.1);
+}
+
+footer h2 {
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+footer p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* --- Typewriter Cursor Animation --- */
+.typewriter {
+  border-right: 3px solid var(--accent-green);
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent-green); }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 3rem; }
+  .hero h2 { font-size: 1.5rem; }
+  nav .nav-links { display: none; /* Can add a hamburger menu later */ }
+  .btn { display: block; margin: 10px 0; text-align: center; }
+}
