@@ -1,8 +1,8 @@
-// --- 1. Typewriter Effect for Hero Section ---
-const textArray = ["Software Developer.", "Tech Enthusiast.", "Creative Coder."];
-const typingDelay = 150;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
+// --- Typewriter Effect ---
+const textArray = ["Code Hero!", "Web Developer!", "UI Designer!"];
+const typingDelay = 100;
+const erasingDelay = 80;
+const newTextDelay = 1500;
 let textArrayIndex = 0;
 let charIndex = 0;
 
@@ -26,22 +26,37 @@ function erase() {
   } else {
     textArrayIndex++;
     if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-    setTimeout(type, typingDelay + 1100);
+    setTimeout(type, typingDelay + 500);
   }
 }
 
-// Start the typing effect when the DOM loads
 document.addEventListener("DOMContentLoaded", function() {
-  if (textArray.length) setTimeout(type, newTextDelay + 250);
+  if (textArray.length) setTimeout(type, newTextDelay);
 });
 
-
-// --- 2. Change Navbar styling on scroll ---
+// --- Dynamic Navbar Shadow ---
+// Adds a thick comic drop-shadow to the navbar when you scroll down
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
-  if (window.scrollY > 50) {
-    nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.5)';
+  if (window.scrollY > 10) {
+    nav.style.boxShadow = '0px 6px 0px #111111';
   } else {
     nav.style.boxShadow = 'none';
   }
+});
+
+// --- Smooth Scrolling Fallback ---
+// CSS handles most of this, but JS ensures all anchor tags behave correctly
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    
+    // Only intercept if it's a valid ID on the page
+    if(targetId !== "#" && document.querySelector(targetId)) {
+      e.preventDefault();
+      document.querySelector(targetId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
 });
